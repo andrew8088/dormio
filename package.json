@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "description": "sleep analyzer",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npm run unit && npm run integration",
+    "unit": "tape test/unit/*.js | faucet",
+    "integration": "for file in test/integration/*.js; do NODE_ENV=test node $file | faucet; done"
+  },
   "author": "Andrew Burgess <andrew@burgess.io>",
   "repository": {
     "type": "git",
@@ -12,7 +16,14 @@
   "homepage": "http://dormio.co",
   "license": "MIT",
   "dependencies": {
+    "credential": "^0.2.6",
+    "mongoose": "^4.1.0",
     "qconf": "^2.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "mongotape": "^1.0.0",
+    "rewire": "^2.3.4",
+    "sinon": "^1.15.4",
+    "tape": "^4.0.1"
+  }
 }
