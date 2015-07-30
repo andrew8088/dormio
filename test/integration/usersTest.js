@@ -1,12 +1,5 @@
 'use strict';
-var env = require('../../env');
-
-var mongotape = require('mongotape')({
-	mongoose: require('mongoose'),
-	models: '../../lib/models/*',
-	env: env.get.bind(env)
-});
-
+var mongotape = require('../fixtures/mongotape');
 var User = require('../../lib/models/user');
 var users = require('../../lib/users');
 
