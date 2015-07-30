@@ -1,8 +1,7 @@
 'use strict';
-var env = require('../../env');
+require('dotenv').load();
 
 module.exports = require('mongotape')({
 	mongoose: require('mongoose'),
-	models: '../../lib/models/*',
-	env: env.get.bind(env)
+	models: '../../lib/models/*'
 });

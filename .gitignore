@@ -1,4 +1,4 @@
 node_modules
 scratch
 **.DS_Store
-config.json
+.env
