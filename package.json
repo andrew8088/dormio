@@ -16,14 +16,18 @@
   "homepage": "http://dormio.co",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.13.2",
     "credential": "^0.2.6",
+    "express": "^4.13.1",
     "mongoose": "^4.1.0",
+    "passport": "^0.2.2",
     "qconf": "^2.2.0"
   },
   "devDependencies": {
     "mongotape": "^1.0.0",
     "rewire": "^2.3.4",
     "sinon": "^1.15.4",
+    "supertest": "^1.0.1",
     "tape": "^4.0.1"
   }
 }
